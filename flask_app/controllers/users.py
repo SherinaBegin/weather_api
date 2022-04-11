@@ -9,7 +9,6 @@ import requests #requests data from API
 @app.route('/')
 def index():
    results = requests.get(f'https://api.openweathermap.org/data/2.5/weather?q=bellevue&appid={keys.weather}').json()
-   print(results)
    # creating dictionary to easily access information from API
    bellevue = {
       'name': results['name'],
